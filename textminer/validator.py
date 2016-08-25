@@ -31,8 +31,11 @@ def phone_number(pn):
 
 
 def money(mo):
+
     #return re.match(r'^\$([0-9]{1,3})(,?[0-9]{3})*(\.[0-9){2})?$', mo)
-    return re.match(r'^\$[0-9]{1,3}(?:,?[0-9{3})*(?:\.[0-9]{2})?', mo)
+    return re.search(r'^\$[0-9]{1,3}(?:,?[0-9]{3})*(?:\.[0-9]{2})?$', mo)
+
+
 
 def zipcode(zp):
     return re.search(r"^(^\d{5}-\d{4})|(^\d{5})+$", zp)
